@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+
+<robot name="jack_pack" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="PI" value="3.14159"/>
+
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+
+        <joint name="Revolute 9">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 10">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 11">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 12">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 21">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 22">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 23">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 24">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 37">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 38">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 39">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="Revolute 40">
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+        
+
+
+    </ros2_control>
+    <gazebo>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <!--<robot_sim_type>gazebo_ros2_control/DefaultRobotHWSim</robot_sim_type> -->
+            <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
+            <parameters>$(find jack_pack)/config/qp_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
+</robot>

@@ -1,0 +1,30 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000 #Hz
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    
+arm_controller:
+  ros__parameters:
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    joints:
+      - Revolute 40
+      - Revolute 39
+      - Revolute 38
+      - Revolute 37
+      - Revolute 9
+      - Revolute 10
+      - Revolute 11
+      - Revolute 12
+      - Revolute 21
+      - Revolute 22
+      - Revolute 23
+      - Revolute 24
