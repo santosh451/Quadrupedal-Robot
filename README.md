@@ -6,4 +6,4 @@ A four legged robot.
 
 ![IMG_20240416_134214](https://github.com/santosh451/Quadrupedal-Robot/assets/147600054/c239e010-6f71-4cdc-9952-be0592d95b04)
 
-`git clone https://github.com/username/repository.git`
+
